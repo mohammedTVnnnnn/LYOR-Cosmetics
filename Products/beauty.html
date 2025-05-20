@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LYORÉ Cosmetics - القسم الأول</title>
+    <link rel="icon" href="img/icon_2.png" sizes="192x192">
+    <link rel="stylesheet" href="style-b.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="شعار" width="149" height="50">
+                <!-- Logo and brand name removed -->
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link active">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link">المنتجات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">اتصل بنا</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <div class="current-lang" onclick="toggleLangDropdown()">
+                    العربية <span>▾</span>
+                </div>
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-option active" data-lang="ar" onclick="changeLang('ar')">العربية</div>
+                    <div class="lang-option" data-lang="en" onclick="changeLang('en')">English</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('img/NASRYAT/hero-bg.jpg') center/cover no-repeat;">
+        <div class="container hero-content">
+            <h1 class="hero-title">روتين عناية مخصص لكل فرد</h1>
+            <p class="hero-subtitle">مكونات طبيعية نقية وتكنولوجيا فرنسية متقدمة لنتائج ملموسة</p>    
+            <div>
+                <a href="#products" class="btn btn-outline">اكتشفي منتجاتنا</a>
+                <a href="#contact" class="btn btn-primary">تواصلي معنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" id="productSearch" placeholder="بحث عن منتج..." class="search-input">
+                <button class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <h2 class="section-title">منتجاتنا</h2>
+            <div class="products-grid" id="productsContainer">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">اتصل بنا</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>نحن دائماً في خدمتكم</h3>
+                    <p>يمكنكم التواصل معنا من خلال القنوات التالية:</p>
+                    <p><strong>العنوان:</strong> جورجيا، تبليسي، روستافي القديمة، شارع 26، محل رقم 50</p>
+                    <p><strong>الهاتف:</strong> +995 591 03 51 12</p>
+                    <p><strong>البريد الإلكتروني:</strong> info@hotline.ge</p>
+                    <p><strong>ساعات العمل:</strong> يومياً من 8:00 صباحاً حتى 10:00 مساءً</p>
+                </div>
+                <div class="about-image">
+                    <img src="img/NASRYAT/store.jpg" alt="صورة للمتجر">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>من نحن</h4>
+                    <p>نحن متجر متخصص في مستحضرات التجميل والعناية بالبشرة، نقدم مجموعة واسعة من المنتجات العالمية الأصلية بأسعار تنافسية. نسعى دائماً لتقديم أفضل المنتجات وأحدث صيحات التجميل لعملائنا الكرام.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61553690433032" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/995591035112" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/+995591035112" target="_blank"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>روابط مهمة</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="#products">المنتجات</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>ساعات العمل</h4>
+                    <p>الاثنين - الجمعة: 8:00 ص - 10:00 م</p>
+                    <p>السبت - الأحد: 9:00 ص - 9:00 م</p>
+                    <p><strong>خدمة التوصيل:</strong> متوفرة طوال أيام الأسبوع</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 LYORÉ Cosmetics. جميع الحقوق محفوظة.</p>
+                <p><span data-translate="createdBy">تم التطوير بواسطة</span> <a class="created" href="https://www.facebook.com/profile.php?id=61553690433032&locale=ar_AR">mohammed Abo rajap</a> & <a class="created" href="https://www.facebook.com/abdogogo081?locale=ar_AR">ABDULRAHMAN OMAR</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="login-modal" id="loginModal">
+        <div class="login-form">
+            <h3>تسجيل الدخول للإدارة</h3>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="close-modal" id="closeModal">إلغاء</button>
+                    <button type="submit" class="btn btn-primary">دخول</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- استدعاء ملف products.js -->
+    <script src="products.js"></script>
+    <script>
+// DOM Elements
+const productsContainer = document.getElementById('productsContainer');
+const adminLink = document.getElementById('adminLink');
+const loginModal = document.getElementById('loginModal');
+const closeModal = document.getElementById('closeModal');
+const adminLoginForm = document.getElementById('adminLoginForm');
+const productSearch = document.getElementById('productSearch');
+const langDropdown = document.getElementById('langDropdown');
+
+// Current language
+let currentLang = 'ar';
+
+// UI text translations
+const translations = {
+    ar: {
+        home: "الرئيسية",
+        products: "المنتجات",
+        about: "من نحن",
+        contact: "اتصل بنا",
+        heroTitle: "مستحضرات التجميل والعناية بالبشرة",
+        heroSubtitle: "اكتشف جمالك الطبيعي مع منتجاتنا المميزة",
+        discoverProducts: "اكتشف منتجاتنا",
+        contactUs: "تواصل معنا",
+        productsTitle: "منتجاتنا",
+        contactTitle: "اتصل بنا",
+        contactHeading: "نحن دائماً في خدمتكم",
+        contactIntro: "يمكنكم التواصل معنا من خلال القنوات التالية:",
+        address: "جورجيا، تبليسي، روستافي القديمة، شارع 26، محل رقم 50",
+        phone: "+995 591 03 51 12",
+        email: "info@hotline.ge",
+        workingHoursText: "يومياً من 8:00 صباحاً حتى 10:00 مساءً",
+        available: "متوفر",
+        unavailable: "غير متوفر",
+        orderNow: "اطلب الآن",
+        currency: "درهم",
+        loginTitle: "تسجيل الدخول للإدارة",
+        password: "كلمة المرور",
+        cancel: "إلغاء",
+        login: "دخول",
+        incorrectPassword: "كلمة المرور غير صحيحة",
+        sendOrder: "إرسال الطلب",
+        searchPlaceholder: "ابحث عن منتجات التجميل...",
+        noResults: "لم يتم العثور على منتجات مطابقة للبحث",
+        aboutUs: "من نحن",
+        aboutUsText: "نحن متجر متخصص في بيع مستحضرات التجميل والعناية بالبشرة من أشهر الماركات العالمية. نقدم مجموعة واسعة من المنتجات الأصلية عالية الجودة، مع ضمان أفضل الأسعار وخدمة عملاء متميزة.",
+        importantLinks: "روابط مهمة",
+        workingHours: "ساعات العمل",
+        workingHoursWeekdays: "الاثنين - الجمعة: 8:00 ص - 10:00 م",
+        workingHoursWeekend: "السبت - الأحد: 9:00 ص - 9:00 م",
+        deliveryService: "خدمة التوصيل: متوفرة طوال أيام الأسبوع",
+        rightsReserved: "جميع الحقوق محفوظة",
+        createdBy: "تم التطوير بواسطة"
+    },
+    en: {
+        home: "Home",
+        products: "Products",
+        about: "About Us",
+        contact: "Contact",
+        heroTitle: "Cosmetics and Skincare Products",
+        heroSubtitle: "Discover your natural beauty with our exclusive products",
+        discoverProducts: "Discover Our Products",
+        contactUs: "Contact Us",
+        productsTitle: "Our Products",
+        contactTitle: "Contact Us",
+        contactHeading: "We Are Always At Your Service",
+        contactIntro: "You can contact us through the following channels:",
+        address: "Georgia, Tbilisi, Old Rustavi, Street 26, Shop #50",
+        phone: "+995 591 03 51 12",
+        email: "info@hotline.ge",
+        workingHoursText: "Daily from 8:00 AM to 10:00 PM",
+        available: "Available",
+        unavailable: "Unavailable",
+        orderNow: "Order Now",
+        currency: "AED",
+        loginTitle: "Admin Login",
+        password: "Password",
+        cancel: "Cancel",
+        login: "Login",
+        incorrectPassword: "Incorrect password",
+        sendOrder: "Send Order",
+        searchPlaceholder: "Search for beauty products...",
+        noResults: "No matching products found",
+        aboutUs: "About Us",
+        aboutUsText: "We are a store specialized in selling cosmetics and skincare products from the most famous international brands. We offer a wide range of high-quality original products, ensuring the best prices and excellent customer service.",
+        importantLinks: "Important Links",
+        workingHours: "Working Hours",
+        workingHoursWeekdays: "Monday - Friday: 8:00 AM - 10:00 PM",
+        workingHoursWeekend: "Saturday - Sunday: 9:00 AM - 9:00 PM",
+        deliveryService: "Delivery Service: Available all week",
+        rightsReserved: "All Rights Reserved",
+        createdBy: "Developed by"
+    }
+};
+
+// Display products based on current language
+function displayProducts(filterText = '') {
+    productsContainer.innerHTML = '';
+    
+    const filteredProducts = filterText 
+        ? products_1.filter(product => {
+            const name = currentLang === 'ar' ? product.name : product.name_en;
+            const description = currentLang === 'ar' ? product.description : product.description_en;
+            return name.toLowerCase().includes(filterText.toLowerCase()) || 
+                   description.toLowerCase().includes(filterText.toLowerCase());
+        }) 
+        : products_1;
+    
+    if (filteredProducts.length === 0) {
+        productsContainer.innerHTML = `<p class="no-results">${translations[currentLang].noResults}</p>`;
+        return;
+    }
+    
+    filteredProducts.forEach((product, index) => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+        
+        const name = currentLang === 'ar' ? product.name : product.name_en;
+        const description = currentLang === 'ar' ? product.description : product.description_en;
+        const availableText = product.available 
+            ? translations[currentLang].available 
+            : translations[currentLang].unavailable;
+        const availableClass = product.available ? 'product-available' : 'product-available product-unavailable';
+        
+        productCard.innerHTML = `
+            <div class="product-img-container">
+                <img src="${product.image}" alt="${name}" class="product-img">
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">${name}</h3>
+                <p class="product-description">${description}</p>
+                <div class="product-price">${product.price} ${translations[currentLang].currency}</div>
+                <div class="${availableClass}">${availableText}</div>
+                <button class="product-buy" onclick="orderProduct(${product.id})">${translations[currentLang].orderNow}</button>
+            </div>
+        `;
+        
+        setTimeout(() => {
+            productCard.style.opacity = '1';
+            productCard.style.transform = 'translateY(0)';
+        }, index * 100);
+        
+        productsContainer.appendChild(productCard);
+    });
+}
+
+// Order product function - redirects to WhatsApp
+function orderProduct(productId) {
+    const product = products_1.find(p => p.id === productId);
+    if (!product) return;
+    
+    // Create message with product details
+    const productName = currentLang === 'ar' ? product.name : product.name_en;
+    const message = `أريد طلب: ${productName}`;
+    
+    // Redirect to WhatsApp with the product information
+    const whatsappNumber = "01093108623";
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+}
+
+// Search products
+if (productSearch) {
+    productSearch.addEventListener('input', function() {
+        displayProducts(this.value);
+    });
+}
+
+// Language dropdown toggle
+function toggleLangDropdown() {
+    if (langDropdown) {
+        langDropdown.classList.toggle('show');
+    }
+}
+
+// Change language
+function changeLang(lang) {
+    if (lang === currentLang) return;
+    currentLang = lang;
+    
+    // Update UI with new language
+    document.querySelector('.current-lang').textContent = lang === 'ar' ? 'العربية' : 'English';
+    document.querySelector('.current-lang').innerHTML += ' <span>▾</span>';
+    
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.classList.toggle('active', option.getAttribute('data-lang') === lang);
+    });
+    
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    
+    // Update all UI text elements
+    updateUILanguage();
+    
+    // Update product list
+    displayProducts(productSearch?.value || '');
+    
+    // Close dropdown
+    if (langDropdown) {
+        langDropdown.classList.remove('show');
+    }
+}
+
+// Update all UI text based on current language
+function updateUILanguage() {
+    // Update navigation
+    document.querySelectorAll('.nav-link').forEach((link, index) => {
+        if (index === 0) link.textContent = translations[currentLang].home;
+        if (index === 1) link.textContent = translations[currentLang].products;
+        if (index === 2) link.textContent = translations[currentLang].contact;
+    });
+    
+    // Update hero section
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    if (heroTitle) heroTitle.textContent = translations[currentLang].heroTitle;
+    if (heroSubtitle) heroSubtitle.textContent = translations[currentLang].heroSubtitle;
+    
+    // Update buttons
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        if (button.textContent.includes('اكتشف') || button.textContent.includes('Discover')) {
+            button.textContent = translations[currentLang].discoverProducts;
+        }
+        if (button.textContent.includes('تواصل') || button.textContent.includes('Contact')) {
+            button.textContent = translations[currentLang].contactUs;
+        }
+    });
+    
+    // Update section titles
+    const sectionTitles = document.querySelectorAll('.section-title');
+    sectionTitles.forEach(title => {
+        if (title.closest('#products')) {
+            title.textContent = translations[currentLang].productsTitle;
+        }
+        if (title.closest('#contact')) {
+            title.textContent = translations[currentLang].contactTitle;
+        }
+    });
+    
+    // Update contact section
+    const contactHeading = document.querySelector('#contact .about-text h3');
+    if (contactHeading) contactHeading.textContent = translations[currentLang].contactHeading;
+    
+    const contactParagraphs = document.querySelectorAll('#contact .about-text p');
+    if (contactParagraphs.length > 0) {
+        contactParagraphs[0].textContent = translations[currentLang].contactIntro;
+        if (contactParagraphs[1]) contactParagraphs[1].innerHTML = `<strong>${currentLang === 'ar' ? 'العنوان:' : 'Address:'}</strong> ${translations[currentLang].address}`;
+        if (contactParagraphs[2]) contactParagraphs[2].innerHTML = `<strong>${currentLang === 'ar' ? 'الهاتف:' : 'Phone:'}</strong> ${translations[currentLang].phone}`;
+        if (contactParagraphs[3]) contactParagraphs[3].innerHTML = `<strong>${currentLang === 'ar' ? 'البريد الإلكتروني:' : 'Email:'}</strong> ${translations[currentLang].email}`;
+        if (contactParagraphs[4]) contactParagraphs[4].innerHTML = `<strong>${currentLang === 'ar' ? 'ساعات العمل:' : 'Working Hours:'}</strong> ${translations[currentLang].workingHoursText}`;
+    }
+    
+    // Update footer
+    const footerHeadings = document.querySelectorAll('.footer-column h4');
+    footerHeadings.forEach((heading, index) => {
+        if (index === 0) heading.textContent = translations[currentLang].aboutUs;
+        if (index === 1) heading.textContent = translations[currentLang].importantLinks;
+        if (index === 2) heading.textContent = translations[currentLang].workingHours;
+    });
+    
+    // Update footer links
+    const footerLinks = document.querySelectorAll('.footer-links a');
+    footerLinks.forEach((link, index) => {
+        if (index === 0) link.textContent = translations[currentLang].home;
+        if (index === 1) link.textContent = translations[currentLang].products;
+        if (index === 2) link.textContent = translations[currentLang].contact;
+    });
+    
+    // Update footer text
+    const footerParagraphs = document.querySelectorAll('.footer-column:nth-child(1) p');
+    if (footerParagraphs.length > 0) {
+        footerParagraphs[0].textContent = translations[currentLang].aboutUsText;
+    }
+    
+    const workingHoursParagraphs = document.querySelectorAll('.footer-column:nth-child(3) p');
+    if (workingHoursParagraphs.length > 0) {
+        workingHoursParagraphs[0].textContent = translations[currentLang].workingHoursWeekdays;
+        if (workingHoursParagraphs[1]) workingHoursParagraphs[1].textContent = translations[currentLang].workingHoursWeekend;
+        if (workingHoursParagraphs[2]) workingHoursParagraphs[2].innerHTML = `<strong>${currentLang === 'ar' ? 'خدمة التوصيل:' : 'Delivery Service:'}</strong> ${currentLang === 'ar' ? 'متوفرة طوال أيام الأسبوع' : 'Available all week'}`;
+    }
+    
+    // Update copyright
+    const copyrightParagraphs = document.querySelectorAll('.copyright p');
+    if (copyrightParagraphs.length > 0) {
+        copyrightParagraphs[0].innerHTML = `&copy; 2025 LYORÉ Cosmetics. ${translations[currentLang].rightsReserved}.`;
+        if (copyrightParagraphs[1]) {
+            const developedBy = `<span data-translate="createdBy">${translations[currentLang].createdBy}</span> <a class="created" href="https://www.facebook.com/profile.php?id=61553690433032&locale=ar_AR">mohammed Abo rajap</a> & <a class="created" href="https://www.facebook.com/profile.php?id=61553690433032&locale=ar_AR">ABDULRAHMAN OMAR</a>`;
+            copyrightParagraphs[1].innerHTML = developedBy;
+        }
+    }
+    
+    // Update search placeholder
+    if (productSearch) {
+        productSearch.placeholder = translations[currentLang].searchPlaceholder;
+    }
+}
+
+// Close modal on button click
+if (closeModal) {
+    closeModal.addEventListener('click', function() {
+        loginModal.classList.remove('show');
+    });
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', function(e) {
+    if (e.target === loginModal) {
+        loginModal.classList.remove('show');
+    }
+    
+    if (langDropdown && !e.target.matches('.current-lang') && !e.target.closest('.lang-dropdown')) {
+        langDropdown.classList.remove('show');
+    }
+});
+
+// Scroll event for header
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// Active navigation link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    displayProducts();
+    updateUILanguage();
+});
+    </script>
+</body>
+</html>
